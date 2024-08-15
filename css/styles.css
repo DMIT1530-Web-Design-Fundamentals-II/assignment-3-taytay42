@@ -42,11 +42,16 @@ h2 {
     color: var(--md-blue);
     text-transform: uppercase;
     font-weight: 400;
+    font-size: 2.7rem;
 }
 
 a {
     text-transform: uppercase;
     text-decoration: none;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 /** Header **/
@@ -110,22 +115,32 @@ a {
 }
 
 .button-3 {
-    display: inline-block;
+    display: flex;
     border: 0.2rem solid var(--md-blue);
     border-radius: 0.1rem;
     color: var(--md-blue);
     text-align: center;
     border-radius: 0.3rem;
     font-size: 1.5rem;
+    padding: 1.01rem 0;
+    align-items: center;
+    justify-content: center;
 }
+
+.arrow{
+    width: 1.8rem;
+    height: auto;
+    margin-left: 0.3rem;
+}
+
 
 /** Our Work **/
 
 .work {
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .work-content {
@@ -134,8 +149,8 @@ a {
     align-items: center;
 }
 
-.work-content h2 {
-    font-size: 3rem;
+.work-content h2,
+.wwd-text h2 {
     margin-right: auto;
     border-bottom: 0.2rem solid var(--seafoam-green);
     line-height: 4rem;
@@ -193,6 +208,127 @@ a {
     align-items: center;
 }
 
+/** What We Do **/
+.what-we-do {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wwd-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.wwd-card-body h3 {
+    color: var(--seafoam-green);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.75rem;
+    line-height: 2.2rem;
+}
+
+.wwd-card-body p {
+    margin-bottom: 3.19rem;
+}
+
+.wwd-card img {
+    border-radius: 1rem;
+}
+
+/** Who We Are **/
+.who-we-are {
+    background-color: var(--seafoam-green);
+    padding-top: 4.69rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.wwa-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wwa-text h2 {
+    margin-right: auto;
+    border-bottom: 0.2rem solid var(--lt-seafoam-green);
+    line-height: 4rem;
+}
+
+/** Footer **/
+footer {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+footer h2 {
+    color: var(--lt-seafoam-green);
+    font-size: 1.8rem;
+}
+
+.block {
+    display: block;
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+}
+
+.address{
+    margin-top: 2.31rem;
+}
+
+.address p{
+    margin-top: 0.6rem;
+}
+
+.email{
+    margin-top: 3.63rem;
+    width: 13.38rem;
+}
+
+.copyright{
+    background-color: var(--dk-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials svg{
+    height: 2.25rem;
+    width: auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+/** Form **/
+
+.subscribe form input[type="email"] {
+	background-color: var(--lt-seafoam-green);
+	border: none;
+	text-transform: uppercase;
+}
+
+.subscribe form input[type="submit"] {
+	background-color: var(--seafoam-green);
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
 /** Screen Sizes Styling **/
 @media screen and (min-width:320px) {
 
@@ -203,7 +339,6 @@ a {
     }
 
     .hero-content h2 {
-        font-size: 3.5rem;
         width: 17.56rem;
         line-height: 4rem;
         margin-top: 5.06rem;
@@ -223,9 +358,113 @@ a {
     }
 
     /** Our Work **/
+    .work-content {
+        width: 21.5rem;
+        margin-top: 4.69rem;
+        margin-bottom: 3.38rem;
+    }
+
+    .work-content h2 {
+        margin-bottom: 2.44rem;
+    }
+
+    .button-3 {
+        width: 21.5rem;
+        margin-top: 3.38rem;
+    }
+
+    /** What We Do **/
+    .wwd-content {
+        width: 21.5rem;
+    }
+
+    .wwd-text h2 {
+        margin-top: 4.63rem;
+        margin-bottom: 2.63rem;
+    }
+
+    .wwd-card img {
+        margin-bottom: 2.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .wwd-cards{
+        margin-top: 2.81rem;
+    }
+
+    /** Who We Are **/
+
+    .wwa-text {
+        width: 21.5rem;
+    }
+
+    .wwa-text p {
+        margin-top: 2.5rem;
+    }
+
+    .wwa-text .button-3 {
+        margin-bottom: 4.94rem;
+    }
+
+    .wwa-text img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    /** Footer **/
+
+    .footer-wrapper{
+        width: 21.5rem;
+        margin-top: 4.94rem;
+    }
+
+    .newsletter{
+        margin-top: 4.81rem;
+    }
+
+    .newsletter p{
+        margin-bottom: 2.31rem;
+    }
+
+    .copyright-wrapper{
+        width: 21.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.16rem;
+    }
+
+     /** Form **/
+
+     .sub-news{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+     }
+
+     .subscribe form input[type="email"] {
+        width: 100%;
+        padding: 1rem 0  1rem 1rem;
+        font-size: 1.3rem;
+        color: var(--md-blue);
+        margin-top: 2.38rem;
+    }
+    
+    .subscribe form input[type="submit"] {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        color: var(--md-blue);
+        margin-top: 1rem;
+        margin-bottom: 3.25rem;
+    }
 }
 
 @media screen and (min-width:1000px) {
+
+    h2 {
+        font-size: 3.5rem;
+    }
 
     /** Hero **/
     .hero-content {
@@ -248,16 +487,28 @@ a {
     }
 
     /** Our Work **/
+
     .work-content {
         width: 48rem;
     }
 
-    .work {
-        display: flex;
-        justify-content: center;
-    }
-
     .work-content h2 {
         margin-top: 9.69rem;
+        margin-bottom: 2.81rem;
+    }
+
+    /** What We DO **/
+    .wwd-content {
+        width: 48rem;
+    }
+
+    .wwd-text h2 {
+        width: 27.5rem;
+    }
+
+    /** Who We Are **/
+
+    .wwa-text {
+        width: 48rem;
     }
 }
