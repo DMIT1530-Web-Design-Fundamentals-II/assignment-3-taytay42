@@ -1,15 +1,20 @@
 :root {
     /** colours **/
-    --yellow:           #FED766; 
+    --yellow: #FED766;
     --lt-seafoam-green: #ecf9f6;
-    --seafoam-green:    #43C6AC;
-    --md-blue:          #191654;
-    --dk-blue:          #0C0B2A;
-    --blue-grey:        #6B717E;
+    --seafoam-green: #43C6AC;
+    --md-blue: #191654;
+    --dk-blue: #0C0B2A;
+    --blue-grey: #6B717E;
 
     /** typography **/
-    --headings:'Monoton', cursive;
+    --headings: 'Monoton', cursive;
     --body: 'Rubik', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    background-color: #ffffff;
 }
 
 .sr-only {
@@ -19,4 +24,240 @@
     width: 0.1rem;
     height: 0.1rem;
     visibility: hidden;
+}
+
+/** Global Styles **/
+
+h1 {
+    display: none;
+}
+
+body {
+    font-family: var(--body);
+    color: var(--md-blue);
+}
+
+h2 {
+    font-family: var(--headings);
+    color: var(--md-blue);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/** Header **/
+
+.heading {
+    margin-top: 1.25rem;
+    margin-bottom: 1.38rem;
+    margin-left: 1.63rem;
+    height: 3.31rem;
+    width: auto;
+}
+
+/** Hero **/
+
+.hero-content h2,
+.hero-content p {
+    color: var(--lt-seafoam-green);
+    text-align: left;
+}
+
+.hero {
+    background: linear-gradient(45deg, var(--md-blue), var(--seafoam-green));
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content p {
+    margin-top: 1.63rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/** Buttons **/
+
+.button-1 {
+    display: inline-block;
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    width: 100%;
+    text-align: center;
+    padding: 1.38rem 0;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.button-2 {
+    display: inline-block;
+    border: 0.2rem solid var(--seafoam-green);
+    border-radius: 0.3rem;
+    color: var(--seafoam-green);
+    width: 100%;
+    text-align: center;
+    padding: 1.01rem 0;
+    font-size: 1.5rem;
+}
+
+.button-3 {
+    display: inline-block;
+    border: 0.2rem solid var(--md-blue);
+    border-radius: 0.1rem;
+    color: var(--md-blue);
+    text-align: center;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+}
+
+/** Our Work **/
+
+.work {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-content h2 {
+    font-size: 3rem;
+    margin-right: auto;
+    border-bottom: 0.2rem solid var(--seafoam-green);
+    line-height: 4rem;
+}
+
+.row-1 .card:nth-child(odd),
+.row-2 .card:nth-child(even) {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+}
+
+.row-2 .card:nth-child(odd),
+.row-1 .card:nth-child(even) {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+}
+
+.card-body h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+.card {
+    width: 18.75rem;
+    height: 19.19rem;
+    flex: 0 0 auto;
+}
+
+.card img {
+    width: 100%;
+    height: 15.31rem;
+    object-fit: cover;
+}
+
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.row-1,
+.row-2 {
+    display: flex;
+    width: 100%;
+}
+
+.card-body {
+    height: 3.69rem;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+/** Screen Sizes Styling **/
+@media screen and (min-width:320px) {
+
+    /** Hero **/
+    .hero-content {
+        width: 21.5rem;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 3.5rem;
+        width: 17.56rem;
+        line-height: 4rem;
+        margin-top: 5.06rem;
+    }
+
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        gap: 1.5rem;
+        margin-top: 3.81rem;
+        margin-bottom: 5.13rem;
+    }
+
+    /** Our Work **/
+}
+
+@media screen and (min-width:1000px) {
+
+    /** Hero **/
+    .hero-content {
+        width: 48rem;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        width: 100%;
+        margin-top: 10.06rem;
+    }
+
+    .lower {
+        display: block;
+    }
+
+    .buttons {
+        flex-direction: row;
+        margin-bottom: 10.06rem;
+    }
+
+    /** Our Work **/
+    .work-content {
+        width: 48rem;
+    }
+
+    .work {
+        display: flex;
+        justify-content: center;
+    }
+
+    .work-content h2 {
+        margin-top: 9.69rem;
+    }
 }
